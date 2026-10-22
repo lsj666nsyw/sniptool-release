@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.zip
+.venv/
+deploy_site.py
+_gh_token
+.gh_token
