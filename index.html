@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>截图录屏助手 — 区域截图/长截图/GIF录屏/标注打码 | ¥29.9</title>
+<meta name="description" content="Windows 桌面工具：全屏/区域/窗口/延时截图、自动长截图拼接、GIF 录屏、矩形/箭头/马赛克标注。一次购买永久使用，本地运行不联网。">
+<style>
+:root{--p:#2b6cb0;--p2:#1e4e8c;--ink:#1a2233;--ink2:#55617a;--ink3:#8b95a8;--line:#e3e8f0;--bg:#f6f5fb;--card:#fff;--r:16px;--ok:#22c55e}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+
+.hero{background:linear-gradient(135deg,#1e4e8c 0%,#2b6cb0 50%,#3b82f6 100%);color:#fff;padding:56px 0 48px;text-align:center}
+.hero h1{font-size:32px;font-weight:800;margin-bottom:12px;letter-spacing:-0.5px}
+.hero .sub{font-size:17px;opacity:.92;margin-bottom:8px}
+.hero .badges{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.hero .badge{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);padding:5px 14px;border-radius:999px;font-size:13px;font-weight:600}
+.hero .price-box{margin-top:28px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:var(--r);padding:24px;display:inline-block}
+.hero .price{font-size:42px;font-weight:800;color:#ffd700}
+.hero .price small{font-size:14px;font-weight:400;opacity:.8}
+.hero .buy-btn{display:inline-block;margin-top:16px;background:#ffd700;color:#1e4e8c;font-size:18px;font-weight:800;padding:14px 48px;border-radius:999px;text-decoration:none;transition:transform .15s,box-shadow .15s;box-shadow:0 4px 20px rgba(255,215,0,.4)}
+.hero .buy-btn:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(255,215,0,.55)}
+
+.sec{padding:40px 0}
+.sec h2{font-size:22px;font-weight:700;margin-bottom:6px;text-align:center}
+.sec .desc{text-align:center;color:var(--ink2);font-size:15px;margin-bottom:28px}
+
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;transition:box-shadow .2s}
+.feat:hover{box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.feat .icon{font-size:30px;margin-bottom:8px}
+.feat h3{font-size:15px;font-weight:700;margin-bottom:6px}
+.feat p{font-size:13px;color:var(--ink2);line-height:1.6}
+
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:12px}
+.step{text-align:center}
+.step .num{width:40px;height:40px;border-radius:50%;background:var(--p);color:#fff;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+.step h4{font-size:14px;font-weight:700;margin-bottom:4px}
+.step p{font-size:13px;color:var(--ink2)}
+
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.price-card{background:var(--card);border:2px solid var(--line);border-radius:var(--r);padding:24px;text-align:center;transition:border-color .2s}
+.price-card.hot{border-color:var(--p);box-shadow:0 6px 24px rgba(43,108,176,.12)}
+.price-card .plan{font-size:13px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:1px}
+.price-card .amount{font-size:36px;font-weight:800;margin:8px 0}
+.price-card .amount small{font-size:14px;font-weight:400;color:var(--ink3)}
+.price-card ul{list-style:none;padding:0;margin:16px 0}
+.price-card li{font-size:13px;color:var(--ink2);padding:4px 0}
+.price-card li::before{content:"✓ ";color:var(--ok);font-weight:700}
+.price-card .btn{display:block;margin-top:14px;padding:12px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px}
+.price-card .btn.primary{background:var(--p);color:#fff}
+.price-card .btn.secondary{background:var(--line);color:var(--ink)}
+.price-card.hot .btn{background:var(--p);color:#fff}
+
+.faq-item{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:10px}
+.faq-item h4{font-size:15px;font-weight:700;margin-bottom:6px}
+.faq-item p{font-size:14px;color:var(--ink2)}
+
+.contact{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px;text-align:center}
+.contact h2{font-size:20px;margin-bottom:8px}
+.contact p{font-size:15px;color:var(--ink2);margin-bottom:16px}
+.contact .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.contact .btn{display:inline-block;padding:14px 36px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none}
+.contact .btn.primary{background:var(--p);color:#fff}
+.contact .btn.secondary{background:var(--line);color:var(--ink)}
+
+footer{text-align:center;padding:32px 0;color:var(--ink3);font-size:13px;border-top:1px solid var(--line);margin-top:20px}
+
+@media(max-width:600px){
+.hero{padding:40px 0 36px}
+.hero h1{font-size:26px}
+.hero .price{font-size:36px}
+.hero .buy-btn{font-size:16px;padding:12px 36px}
+}
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="wrap">
+    <h1>📸 截图录屏助手</h1>
+    <p class="sub">区域截图 · 长截图 · GIF 录屏 · 标注打码</p>
+    <p class="sub" style="font-size:14px;opacity:.8">一次购买，永久使用，不限设备</p>
+    <div class="badges">
+      <span class="badge">✓ Windows 10/11</span>
+      <span class="badge">✓ 无需联网</span>
+      <span class="badge">✓ 截图不出本机</span>
+      <span class="badge">✓ 免安装双击就用</span>
+    </div>
+    <div class="price-box">
+      <div class="price">¥29.9 <small>一次性买断</small></div>
+      <a class="buy-btn" href="#contact">立即购买 →</a>
+    </div>
+  </div>
+</div>
+
+<!-- Features -->
+<div class="sec">
+  <div class="wrap">
+    <h2>8 大核心功能</h2>
+    <p class="desc">截图、标注、录屏、长截图，一站搞定</p>
+    <div class="feat-grid">
+      <div class="feat">
+        <div class="icon">🖱</div>
+        <h3>区域截图</h3>
+        <p>鼠标拖拽框选屏幕上任意一块，实时显示尺寸，松开即截</p>
+      </div>
+      <div class="feat">
+        <div class="icon">🖥</div>
+        <h3>全屏 / 窗口截图</h3>
+        <p>全屏、指定窗口、延时三种模式，多显示器也支持</p>
+      </div>
+      <div class="feat">
+        <div class="icon">📜</div>
+        <h3>自动长截图</h3>
+        <p>选好窗口自动滚动、自动拼接，还会去掉重复行，一整张长图</p>
+      </div>
+      <div class="feat">
+        <div class="icon">🎬</div>
+        <h3>GIF 录屏</h3>
+        <p>把操作过程录成 GIF，可直接插文档、聊天、网页</p>
+      </div>
+      <div class="feat">
+        <div class="icon">▭</div>
+        <h3>矩形 / 箭头 / 直线</h3>
+        <p>截图后直接画框、标重点，不用另开 PS</p>
+      </div>
+      <div class="feat">
+        <div class="icon">🔲</div>
+        <h3>马赛克 / 高亮 / 裁剪</h3>
+        <p>打码敏感信息、标记重点、只保留要的部分</p>
+      </div>
+      <div class="feat">
+        <div class="icon">Ｔ</div>
+        <h3>文字标注</h3>
+        <p>在截图上直接加中文/英文说明，半透明底可读性好</p>
+      </div>
+      <div class="feat">
+        <div class="icon">↩</div>
+        <h3>撤销 / 重做</h3>
+        <p>标注一步步回退，画错了不用重来</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Steps -->
+<div class="sec" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <h2>3 步开始使用</h2>
+    <p class="desc">简单到不需要学习</p>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h4>下载解压</h4>
+        <p>下载 zip，解压到文件夹，双击 exe</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h4>点截图</h4>
+        <p>选全屏 / 区域 / 窗口 / 延时，一键截取</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h4>标注保存</h4>
+        <p>画框、打码、加箭头，直接存到本地</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Why -->
+<div class="sec">
+  <div class="wrap">
+    <h2>为什么选它</h2>
+    <p class="desc">不是功能堆砌，是省掉你反复切软件的时间</p>
+    <div class="feat-grid">
+      <div class="feat">
+        <div class="icon">🔒</div>
+        <h3>全程本地，不联网</h3>
+        <p>截图、标注、录屏都在你自己电脑上完成，敏感内容不外传</p>
+      </div>
+      <div class="feat">
+        <div class="icon">⚡</div>
+        <h3>不用开 PS</h3>
+        <p>截完直接标注，框选、箭头、马赛克、文字一气呵成</p>
+      </div>
+      <div class="feat">
+        <div class="icon">🪶</div>
+        <h3>免安装</h3>
+        <p>不用装 Python、不用装任何依赖，解压双击就能用</p>
+      </div>
+      <div class="feat">
+        <div class="icon">🔁</div>
+        <h3>一次买断</h3>
+        <p>不限设备、不限次数，换电脑拷文件夹即可继续用</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pricing -->
+<div class="sec">
+  <div class="wrap">
+    <h2>价格方案</h2>
+    <p class="desc">一次购买，永久使用</p>
+    <div class="price-grid">
+      <div class="price-card hot">
+        <div class="plan">单版本 🔥 推荐</div>
+        <div class="amount">¥29.9<small> 一次性</small></div>
+        <ul>
+          <li>全功能，无功能限制</li>
+          <li>区域 / 全屏 / 窗口 / 延时截图</li>
+          <li>自动长截图拼接</li>
+          <li>GIF 录屏</li>
+          <li>标注：矩形/箭头/直线/文字/马赛克/高亮/裁剪</li>
+          <li>撤销 / 重做 / 批量打码</li>
+          <li>不限设备使用</li>
+        </ul>
+        <a class="btn" href="#contact">立即购买</a>
+      </div>
+      <div class="price-card">
+        <div class="plan">办公全家桶</div>
+        <div class="amount">¥59<small> 一次性</small></div>
+        <ul>
+          <li>含截图录屏助手</li>
+          <li>图片批处理助手（基础+专业）</li>
+          <li>表格批量处理助手</li>
+          <li>PDF 批量处理助手</li>
+          <li>单买合计 ¥98.7，省 ¥39</li>
+        </ul>
+        <a class="btn secondary" href="#contact">联系购买</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="sec" style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <h2>常见问题</h2>
+    <div class="faq-item">
+      <h4>软件需要什么环境？</h4>
+      <p>Windows 10/11 即可，无需安装 Python 或任何依赖。解压后双击 exe 就能用。</p>
+    </div>
+    <div class="faq-item">
+      <h4>截图会被上传吗？</h4>
+      <p>不会。软件完全本地运行，不联网，截图只在你自己电脑上处理和保存。</p>
+    </div>
+    <div class="faq-item">
+      <h4>长截图支持哪些窗口？</h4>
+      <p>需要窗口自身支持滚动，浏览器、Word、记事本都可以。如果窗口内容固定不变，程序会自动识别并停止。</p>
+    </div>
+    <div class="faq-item">
+      <h4>马赛克能把敏感信息彻底遮住吗？</h4>
+      <p>马赛克是像素化，不是加密。要绝对安全请用专门的打码工具或直接遮挡。</p>
+    </div>
+    <div class="faq-item">
+      <h4>GIF 录屏文件太大怎么办？</h4>
+      <p>调低帧率（4 帧/秒）、缩短时长，或只录区域而不是全屏。</p>
+    </div>
+    <div class="faq-item">
+      <h4>可以退款吗？</h4>
+      <p>购买后 7 天内，如软件无法正常使用，全额退款。</p>
+    </div>
+    <div class="faq-item">
+      <h4>换电脑还能用吗？</h4>
+      <p>可以。整个文件夹拷到 U 盘，换任何 Windows 电脑都能用，不限设备。</p>
+    </div>
+  </div>
+</div>
+
+<!-- Contact -->
+<div class="sec" id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <h2>📞 立即购买</h2>
+      <p>微信 / QQ 联系，付款后发送软件包 + 使用说明</p>
+      <div class="btns">
+        <a class="btn primary" href="https://work.weixin.qq.com" target="_blank">微信联系</a>
+        <a class="btn secondary" href="https://www.taobao.com" target="_blank">淘宝下单</a>
+      </div>
+      <p style="margin-top:20px;font-size:13px;color:var(--ink3)">
+        支持微信 / 支付宝付款 · 7 天无理由退款 · 永久更新
+      </p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>截图录屏助手 v1.0 · 本软件完全本地运行，不联网，无后台</p>
+  <p style="margin-top:4px">© 2026 截图录屏助手 · 保留所有权利</p>
+</footer>
+
+</body>
+</html>
